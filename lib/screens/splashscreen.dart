@@ -18,7 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Timer(
       Duration(seconds: 2),
-      () => Get.off(() => LoginScreen()), // Navigate to LoginScreen after 2 seconds
+      () => Get.off(
+          () => LoginScreen()), // Navigate to LoginScreen after 2 seconds
     );
   }
 
