@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({
-    super.key,
-    required this.title,
-    required this.color,
-    required this.textcolor,
-    required this.borderColor,
-    //required this.callback
-  });
+  const CustomButton(
+      {super.key,
+      required this.title,
+      required this.color,
+      required this.textcolor,
+      required this.borderColor,
+      required this.callback});
   final String title;
   final Color color;
   final Color textcolor;
   final Color borderColor;
-  //final VoidCallback callback;
+  final VoidCallback callback;
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +27,11 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          callback;
+        },
         child: Text(
-          title,
+          title.toUpperCase(),
           style: TextStyle(
               color: textcolor, fontSize: 18, fontWeight: FontWeight.w600),
         ),
