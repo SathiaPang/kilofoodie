@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kilofoodie/constants.dart';
+import 'package:kilofoodie/constant/constants.dart';
 
 class InfoField extends StatelessWidget {
   final String HintText;

@@ -18,8 +18,8 @@ class SplashController extends GetxController {
           : Get.offAll(() => LoginScreen()),
     );
   }
-
   @override
+    // This  is cancel the timer, to prevent any leaking.
   void onClose() {
     _timer?.cancel();
     super.onClose();
