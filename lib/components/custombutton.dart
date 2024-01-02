@@ -27,9 +27,11 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        onPressed: () {
-          callback;
-        },
+        //There are two ways of using onPressed.
+        // onPressed: () {
+        //   callback();
+        // },
+        onPressed: callback,
         child: Text(
           title.toUpperCase(),
           style: TextStyle(

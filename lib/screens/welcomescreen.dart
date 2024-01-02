@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:kilofoodie/components/custombutton.dart';
 import 'package:kilofoodie/components/random_stuff.dart';
 import 'package:kilofoodie/constant/constants.dart';
+import 'package:kilofoodie/screens/homescreen.dart';
 import 'package:kilofoodie/screens/loginscreen.dart';
 import 'package:kilofoodie/screens/signup.dart';
 
@@ -67,19 +68,39 @@ class WelcomeScreen extends StatelessWidget {
               SizedBox(
                 height: 45,
               ),
-              Loginandsignupbtn(),
+              CustomButton(
+                title: 'login',
+                color: Constants.primaryColor,
+                borderColor: Constants.primaryColor,
+                textcolor: Constants.White,
+                callback: () {
+                  Get.to(() => LoginScreen());
+                },
+              ),
               SizedBox(
                 height: 20,
               ),
-              // CustomButton(
-              //   title: 'SIGNUP',
-              //   color: Constants.secondaryColor,
-              //   borderColor: Constants.primaryColor,
-              //   textcolor: Constants.primaryColor,
-              //   callback: () {
-              //     Get.toNamed('/signup');
-              //   },
-              // ),
+              CustomButton(
+                title: 'SIGNUP',
+                color: Constants.secondaryColor,
+                borderColor: Constants.primaryColor,
+                textcolor: Constants.primaryColor,
+                callback: () {
+                  Get.to(() => SignupScreen());
+                },
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              CustomButton(
+                title: 'home Getway XD',
+                color: Constants.secondaryColor,
+                borderColor: Constants.primaryColor,
+                textcolor: Constants.primaryColor,
+                callback: () {
+                  Get.to(() => HomeScreen());
+                },
+              ),
             ],
           )
         ],
