@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kilofoodie/constant/constants.dart';
 import 'package:kilofoodie/screens/loginscreen.dart';
+import 'package:kilofoodie/screens/welcomescreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(
       Duration(seconds: 2),
       () => Get.off(
-          () => LoginScreen()), // Navigate to LoginScreen after 2 seconds
+          () => WelcomeScreen()), // Navigate to LoginScreen after 2 seconds
     );
   }
 
