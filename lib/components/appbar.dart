@@ -51,7 +51,7 @@ class AppBarWidget extends StatelessWidget {
                 children: [
                   Positioned.fill(
                     child: Image.asset(
-                      'assets/images/drink-three.jpg',
+                      'assets/images/logo-nestle.png',
                       fit: BoxFit.fill,
                     ),
                   ),

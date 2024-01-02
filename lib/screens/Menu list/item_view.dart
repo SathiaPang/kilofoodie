@@ -45,14 +45,14 @@ class Item_View extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 CircleAvatar(
-                  radius: 60,
+                  radius: 80,
                   backgroundImage: AssetImage(food.image),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                 Text(
                   food.subtitle,
@@ -63,7 +63,7 @@ class Item_View extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 5,
                 ),
                 Text(
                   "Chicken Popcorn",
