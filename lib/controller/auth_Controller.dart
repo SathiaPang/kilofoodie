@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:kilofoodie/models/auth_model.dart';
-import 'package:kilofoodie/screens/homescreen.dart';
+import 'package:kilofoodie/screens/Navigation_screen/homescreen.dart';
 import 'package:kilofoodie/screens/loginscreen.dart';
 
 class AuthController extends GetxController {

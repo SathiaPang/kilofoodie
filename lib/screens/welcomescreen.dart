@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kilofoodie/components/custombutton.dart';
-import 'package:kilofoodie/components/random_stuff.dart';
 import 'package:kilofoodie/constant/constants.dart';
-import 'package:kilofoodie/screens/homescreen.dart';
+import 'package:kilofoodie/screens/Menu%20list/navigation_bar.dart';
+import 'package:kilofoodie/screens/Navigation_screen/homescreen.dart';
 import 'package:kilofoodie/screens/loginscreen.dart';
 import 'package:kilofoodie/screens/signup.dart';
 
@@ -98,7 +98,7 @@ class WelcomeScreen extends StatelessWidget {
                 borderColor: Constants.primaryColor,
                 textcolor: Constants.primaryColor,
                 callback: () {
-                  Get.to(() => HomeScreen());
+                  Get.to(() => NavigatorBar());
                 },
               ),
             ],

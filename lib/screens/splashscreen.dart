@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kilofoodie/constant/constants.dart';
-import 'package:kilofoodie/screens/loginscreen.dart';
 import 'package:kilofoodie/screens/welcomescreen.dart';
 
 class SplashScreen extends StatefulWidget {
