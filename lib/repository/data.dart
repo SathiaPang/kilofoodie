@@ -28,20 +28,35 @@ class FoodRepo {
   static List<FoodRepo> foodrepo = [
     //fast food
     FoodRepo(
-        image: 'assets/images/img-brunch.jpeg',
-        subtitle: 'Hamburger',
-        price: '6.8 ',
-        category: "Fast Food"),
+      image: 'assets/images/food/food-1.png',
+      subtitle: 'Elumichai sadam',
+      price: '6.8 ',
+      category: "Fast Food",
+    ),
     FoodRepo(
-        image: 'assets/images/img-brunch.jpeg',
-        subtitle: 'Hamburger',
-        price: '6.8 ',
-        category: "Fast Food"),
+      image: 'assets/images/food/food-2.png',
+      subtitle: 'Chicken soup',
+      price: '6.8 ',
+      category: "Fast Food",
+    ),
     FoodRepo(
-        image: 'assets/images/img-brunch.jpeg',
-        subtitle: 'Hamburger',
-        price: '6.8 ',
-        category: "Fast Food"),
+      image: 'assets/images/food/food-3.png',
+      subtitle: 'Pad Thai',
+      price: '6.8 ',
+      category: "Fast Food",
+    ),
+    FoodRepo(
+      image: 'assets/images/food/food-4.png',
+      subtitle: 'Gyro Sandwich',
+      price: '6.8 ',
+      category: "Fast Food",
+    ),
+    FoodRepo(
+      image: 'assets/images/food/food-5.png',
+      subtitle: 'Miso Soup',
+      price: '6.8 ',
+      category: "Fast Food",
+    ),
 
     //Drink
     FoodRepo(

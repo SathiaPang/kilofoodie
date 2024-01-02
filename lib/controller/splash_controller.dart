@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:get/get.dart';
 import 'package:kilofoodie/controller/auth_Controller.dart';
-import 'package:kilofoodie/screens/homescreen.dart';
+import 'package:kilofoodie/screens/Navigation_screen/homescreen.dart';
 import 'package:kilofoodie/screens/loginscreen.dart';
 
 class SplashController extends GetxController {
