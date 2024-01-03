@@ -50,17 +50,3 @@ class _FastFoodDetailState extends State<FastFoodDetail> {
     );
   }
 }
-
-// class DrinkDetail extends StatefulWidget {
-//   const DrinkDetail({super.key});
-
-//   @override
-//   State<DrinkDetail> createState() => _DrinkDetailState();
-// }
-
-// class _DrinkDetailState extends State<DrinkDetail> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold();
-//   }
-// }

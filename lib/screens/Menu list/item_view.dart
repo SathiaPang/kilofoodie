@@ -58,7 +58,7 @@ class Item_View extends StatelessWidget {
                   food.subtitle,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 25,
+                    fontSize: 24,
                     color: Colors.black,
                   ),
                 ),
@@ -84,7 +84,7 @@ class Item_View extends StatelessWidget {
                       color: Colors.yellow,
                     ),
                     Text(
-                      '3.5',
+                      '5',
                       style:
                           TextStyle(fontSize: 17, color: Constants.textcolors),
                     )
@@ -99,16 +99,20 @@ class Item_View extends StatelessWidget {
                       TextSpan(
                         text: '\$ ',
                         style: TextStyle(
-                            fontSize: 20, color: Constants.primaryColor),
+                          fontSize: 20,
+                          color: Constants.primaryColor,
+                        ),
                       ),
                       TextSpan(
-                        text: '20.00',
+                        text: food.price,
                         style: TextStyle(
-                            fontSize: 30, color: Constants.primaryColor),
+                          fontSize: 30,
+                          color: Constants.primaryColor,
+                        ),
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
