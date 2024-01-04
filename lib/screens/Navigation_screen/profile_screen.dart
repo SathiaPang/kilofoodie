@@ -89,9 +89,78 @@ class ProfileScreen extends StatelessWidget {
                   color: Constants.primaryColor,
                 ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            FunctionButton(
+              size: size,
+              title: 'My Orders',
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            FunctionButton(
+              size: size,
+              title: 'My Addresses',
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            FunctionButton(
+              size: size,
+              title: 'My Favorities',
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            FunctionButton(
+              size: size,
+              title: 'Coupons',
+            ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class FunctionButton extends StatelessWidget {
+  const FunctionButton({
+    super.key,
+    required this.size,
+    required this.title,
+  });
+
+  final Size size;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: size.width,
+      height: size.height * .08,
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15.0),
+          child: Text(
+            title,
+            style: TextStyle(fontSize: 20),
+          ),
+        ),
+      ),
+      decoration: BoxDecoration(
+        color: Constants.White,
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5), // Shadow color
+            spreadRadius: 2, // Spread radius
+            blurRadius: 2, // Blur radius
+            offset: Offset(0, 2), // Offset in x and y
+          ),
+        ],
       ),
     );
   }
