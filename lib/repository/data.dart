@@ -1,3 +1,4 @@
+//This is on handle for
 class FoodCategory {
   String food, images, price, rate;
 
@@ -9,7 +10,6 @@ class FoodCategory {
   });
 
   static List<FoodCategory> getList() => [
-        FoodCategory(food: "Fast Food", images: "", price: "", rate: ""),
         FoodCategory(food: "Drink", images: "", price: "", rate: ""),
         FoodCategory(food: "Snack", images: "", price: "", rate: ""),
       ];
