@@ -9,6 +9,7 @@ class AddToCartScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('This is add to cart screen'),
       ),
+      body: Scaffold(),
     );
   }
 }
