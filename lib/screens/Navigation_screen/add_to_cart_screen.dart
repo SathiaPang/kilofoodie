@@ -7,7 +7,7 @@ class AddToCartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('This is add to cart screen'),
+        title: Text('Cart'),
       ),
       body: Scaffold(),
     );

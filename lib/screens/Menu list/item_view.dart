@@ -12,19 +12,17 @@ class Item_View extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Container(
       height: double.infinity,
-      margin: EdgeInsets.all(10),
-      width: 300,
+      width: size.width * .65,
+      margin: EdgeInsets.only(left: 0, right: 0, top: 0, bottom: 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            height: 10,
-          ),
           Container(
             height: 350, // Adjust the height as needed
             margin: EdgeInsets.all(20), // Adjust the width as needed
