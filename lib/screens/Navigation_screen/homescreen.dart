@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   ? Constants.White
                   : Constants.formtextcolor,
             ),
-            SizedBox(width: 20),
+            SizedBox(width: 10),
             Text(
               label,
             ),
@@ -105,17 +105,38 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               const SizedBox(height: 15),
               SearchField(),
               const SizedBox(height: 20),
-              Obx(
-                () => TabBar(
-                  isScrollable: true,
-                  dividerColor: Colors.transparent,
-                  controller: _tabController,
-                  indicatorColor: Colors.transparent,
-                  labelColor: Colors.white,
-                  tabAlignment: TabAlignment.start,
-                  tabs: _buildTabUI(),
+              //This is the OBX For the Tabbar
+              Container(
+                padding: EdgeInsets.only(left: 0),
+                child: Obx(
+                  () => TabBar(
+                    isScrollable: true,
+                    dividerColor: Colors.transparent,
+                    controller: _tabController,
+                    indicatorColor: Colors.transparent,
+                    labelColor: Colors.white,
+                    tabAlignment: TabAlignment.start,
+                    tabs: _buildTabUI(),
+                  ),
                 ),
               ),
+
+              //See all is here
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    'See all',
+                    style: TextStyle(
+                        color: Constants.primaryColor,
+                        fontWeight: FontWeight.w600),
+                  ),
+                ],
+              ),
+              //This is the Obx for the item View
               Obx(
                 () => Expanded(
                   child: ListView.builder(
@@ -165,6 +186,8 @@ class HomeController extends GetxController {
 
   @override
   void onReady() {
+    //This is the filter, that we set to filter only see what on that catergory.
+    //it's work well, for category but not well for other stuff.
     allList = repo.getFoodList();
     filterByTab("Fast Food");
     super.onReady();
@@ -188,7 +211,7 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: .0),
+      padding: const EdgeInsets.symmetric(horizontal: 0),
       child: Row(
         //crossAxisAlignment: CrossAxisAlignment.s,
         mainAxisAlignment: MainAxisAlignment.start,
