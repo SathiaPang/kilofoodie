@@ -18,7 +18,6 @@ class Item_View extends StatelessWidget {
       width: 300,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: Constants.White,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
