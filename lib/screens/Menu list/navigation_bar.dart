@@ -35,10 +35,10 @@ class NavigationController extends GetxController {
 
   final screens = [
     HomeScreen(),
-    const FavoriteScreen(),
-    const AddToCartScreen(),
-    const NotifiScreen(),
-    const ProfileScreen(),
+    FavoriteScreen(),
+    AddToCartScreen(),
+    NotifiScreen(),
+    ProfileScreen(),
   ];
 
   final bottomBarItems = [
