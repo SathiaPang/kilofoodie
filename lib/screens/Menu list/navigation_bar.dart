@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kilofoodie/constant/constants.dart';
 import 'package:kilofoodie/screens/Navigation_screen/add_to_cart_screen.dart';
-import 'package:kilofoodie/screens/Navigation_screen/favorite_screen.dart';
+import 'package:kilofoodie/screens/Favorite%20Screen/favorite_screen.dart';
 import 'package:kilofoodie/screens/Navigation_screen/homescreen.dart';
 import 'package:kilofoodie/screens/Navigation_screen/notification_screen.dart';
 import 'package:kilofoodie/screens/Navigation_screen/profile_screen.dart';
