@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:kilofoodie/constant/constants.dart';
 import 'package:kilofoodie/repository/data.dart';
@@ -102,7 +103,24 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                             ],
                           ),
                         ),
-                        Icon(Icons.star)
+                        Container(
+                          child: RatingBar.builder(
+                            initialRating: 3,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemSize: Get.height * 0.02, // Responsive font size
+                            itemBuilder: (context, _) => Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            onRatingUpdate: (rating) {
+                              // Handle the rating update
+                              print(rating);
+                            },
+                          ),
+                        ),
                       ],
                     )
                   ],

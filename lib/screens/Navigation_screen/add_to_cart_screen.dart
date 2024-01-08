@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:kilofoodie/constant/constants.dart';
 import 'package:kilofoodie/repository/data.dart';
@@ -172,12 +173,25 @@ class _AddToCartScreenState extends State<AddToCartScreen> {
                     SizedBox(
                       height: 15,
                     ),
-                    Text(
-                      item.subtitle,
-                      style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.w400,
-                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          item.subtitle,
+                          style: TextStyle(
+                            fontSize: 25,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        Text(
+                          '2\u00D7',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontSize:
+                                Get.height * 0.025, // Responsive font size
+                          ),
+                        )
+                      ],
                     ),
                     SizedBox(
                       height: 5,
@@ -212,7 +226,24 @@ class _AddToCartScreenState extends State<AddToCartScreen> {
                             ],
                           ),
                         ),
-                        Icon(Icons.star)
+                        Container(
+                          child: RatingBar.builder(
+                            initialRating: 4.5,
+                            minRating: 1,
+                            direction: Axis.horizontal,
+                            allowHalfRating: true,
+                            itemCount: 5,
+                            itemSize: Get.height * 0.02, // Responsive font size
+                            itemBuilder: (context, _) => Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                            onRatingUpdate: (rating) {
+                              // Handle the rating update
+                              print(rating);
+                            },
+                          ),
+                        ),
                       ],
                     )
                   ],

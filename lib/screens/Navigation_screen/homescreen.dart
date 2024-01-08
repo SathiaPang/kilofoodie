@@ -17,7 +17,19 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   final HomeController _controller = Get.put(HomeController());
 
-  final foodCategorys = ["Fast Food", "Drink", "Snack", "Coca"];
+  final foodCategorys = ["Fast Food", "Drink", "Snack"];
+  IconData getIcon(String category) {
+    switch (category) {
+      case "Fast Food":
+        return Icons.fastfood;
+      case "Drink":
+        return Icons.local_drink;
+      case "Snack":
+        return Icons.local_dining;
+      default:
+        return Icons.category; // You can set a default icon if needed
+    }
+  }
 
   late TabController _tabController;
 
@@ -35,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   List<Widget> _buildTabUI() {
     List<Widget> list = [];
     for (int i = 0; i < foodCategorys.length; i++) {
-      list.add(buildTab(foodCategorys[i], Icons.snapchat, i));
+      list.add(buildTab(foodCategorys[i], getIcon(foodCategorys[i]), i));
     }
     return list;
   }

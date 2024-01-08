@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:kilofoodie/constant/constants.dart';
+import 'package:kilofoodie/screens/Menu%20list/navigation_bar.dart';
 import 'package:kilofoodie/screens/Navigation_screen/homescreen.dart';
 
 class Drawer_Widgets extends StatefulWidget {
@@ -14,43 +17,90 @@ class _Drawer_WidgetsState extends State<Drawer_Widgets> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: Color.fromARGB(255, 255, 250, 249),
+      decoration: BoxDecoration(
+        color: Constants.White,
       ),
       child: Drawer(
-        elevation: 0,
         backgroundColor: Colors.transparent,
         child: ListView(
           shrinkWrap: true,
           children: [
             // Drawer header if needed
             UserAccountsDrawerHeader(
-              accountName: const Text('Sathia Pang'),
-              accountEmail: const Text('sathia.pang@example.com'),
-              currentAccountPicture: const CircleAvatar(
+              accountName: Text('Sathia Pang'),
+              accountEmail: Text('sathia.pang@example.com'),
+              currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('assets/images/image-acc.jpg'),
+              ),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/image-background.jpg"),
+                  fit: BoxFit.fill,
+                ),
               ),
             ),
             // List item for HomeScreen
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
+              leading: Icon(Icons.home),
+              title: Text('Home'),
+              onTap: () {},
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('My Profile'),
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
-                );
+                Get.to(() => NavigatorBar());
               },
             ),
             ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
+              leading: const Icon(Icons.favorite),
+              title: const Text('My Favorites'),
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
-                );
+                Get.to(() => NavigatorBar());
               },
             ),
-            // Add more items as needed
+            ListTile(
+              leading: const Icon(Icons.shopping_cart),
+              title: const Text('Cart'),
+              onTap: () {
+                Get.to(() => NavigatorBar());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.shopping_cart),
+              title: const Text('Setting'),
+              onTap: () {
+                Get.to(() => NavigatorBar());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.shopping_cart),
+              title: const Text('About Us'),
+              onTap: () {
+                Get.to(() => NavigatorBar());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.shopping_cart),
+              title: const Text('Privacy Policy'),
+              onTap: () {
+                Get.to(() => NavigatorBar());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.shopping_cart),
+              title: const Text('Terms & Conditions'),
+              onTap: () {
+                Get.to(() => NavigatorBar());
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text('Logout'),
+              onTap: () {
+                Get.to(() => NavigatorBar());
+              },
+            ),
           ],
         ),
       ),

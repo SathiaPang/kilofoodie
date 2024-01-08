@@ -19,6 +19,7 @@ dependencies:
   get: ^4.6.6
   get_storage: ^2.1.1
   salomon_bottom_bar: ^3.0.0
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kilofoodie/constant/constants.dart';
 
 class AppBarWidget extends StatelessWidget {
   const AppBarWidget({
@@ -26,8 +27,16 @@ class AppBarWidget extends StatelessWidget {
                 height: 50,
                 transform: Matrix4.rotationZ(45 * 3.1415927 / 180),
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 243, 0, 0),
+                  color: Constants.White,
                   borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 5.0,
+                      spreadRadius: 2.0,
+                      offset: Offset(0.0, 2.0),
+                    ),
+                  ],
                 ),
                 transformAlignment: Alignment.center,
                 child: Transform.rotate(
